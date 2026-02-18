@@ -1,13 +1,17 @@
-# Agent_dilemmePrisonnier
+#Agent_prisonner_dilemma
 
-Notre objectif est de créer un agent qui apprend à jouer au dilemme du prisonnier selon le cas standard. Notre agent utilise un algorithme Q learning pour apprendre (avec un taux d'exploration epsilon qui décroit au fil du temps). Dans la première partie du code (4premiers) notre agent joue contre 4 différents types d'adversaires :
+Our objective is to create an agent that learns to play the standard Prisoner’s Dilemma. Our agent uses a Q-learning algorithm to learn, with a decaying epsilon exploration rate over time.
 
-1- AlwaysCooperate : cet adversaire coopère toujours avec nous
-2- AlwaysDefect : Cet adversaire nous trahis toujours
-3- Tit-for-tat: Cet adversaire joue au tour N l'action que le joueur a joué au tour N-1
-4- Random : Cet adversaire joue aléatoirement entre coopérer et trahir avec une probabilité de 0,5 pour chaque cas
+In the first part of the code (“4premiers”), our agent plays against four different types of opponents:
 
-Les résultats sont donnés par un graphique qui apparaît lorsqu'on run le code 4premiers. Les différentes stratégies apprises sont stockées dans une mémoire nommée trained_agent_Qtable
+AlwaysCooperate: this opponent always cooperates with us.
 
-Ensuite, nous avons testé un dernier cas de figure dans lequel notre agent joue contre une copie de lui même. Cependant, notre agent met à jour sa mémoire tout les 50 matchs, mais pas son adversaire. On observe que notre agent prend le dessus sur son adversaire au fur et à mesure du temps. Ce cde est dans la partie nommé Duel
+AlwaysDefect: this opponent always defects against us.
 
+Tit-for-Tat: this opponent plays, at round N, the action that the player chose at round N−1.
+
+Random: this opponent randomly chooses between cooperation and defection with probability 0.5 for each action.
+
+The results are displayed in a graph that appears when running the “4premiers” code. The different learned strategies are stored in a memory structure called trained_agent_Qtable.
+
+Next, we tested a final scenario in which our agent plays against a copy of itself. However, our agent updates its memory every 50 matches, while its opponent does not. We observe that our agent gradually outperforms its opponent over time. This code is contained in the section named “Duel.”
