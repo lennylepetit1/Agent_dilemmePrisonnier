@@ -1,4 +1,4 @@
-#Agent_prisonner_dilemma
+# Agent_prisonner_dilemma
 
 Our objective is to create an agent that learns to play the standard Prisoner’s Dilemma. Our agent uses a Q-learning algorithm to learn, with a decaying epsilon exploration rate over time.
 
